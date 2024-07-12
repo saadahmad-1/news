@@ -26,9 +26,7 @@ export default class HomeScreen extends Component {
 
   getArticles() {
     axios
-      .get(
-        "https://newsapi.org/v2/everything?q=pakistan&apiKey=378f321edf194aa698775ced044519cc"
-      )
+      .get("https://newsapi.org/v2/everything?q=pakistan&apiKey=YOUR_API_KEY")
       .then((response) => {
         return response.data.articles.map((article) => ({
           date: article.publishedAt,
